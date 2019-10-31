@@ -1,13 +1,7 @@
 package Medium;
 
-class ListNode {
-	int val;
-	ListNode next;
-	ListNode(int x) {
-		val = x;
-	}
-}
 
+import Structures.ListNode;
 
 public class Add_Two_Numbers {
 	public static void main(String[] args) {
