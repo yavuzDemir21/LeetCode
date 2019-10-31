@@ -2,7 +2,6 @@ package Medium;
 
 public class Unique_Paths {
     public static void main(String[] args) {
-        int m=7, n=3;
         System.out.println(uniquePaths(6,4));
 
     }
