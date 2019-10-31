@@ -47,19 +47,11 @@ public class Add_Two_Numbers {
 
 			if(overflow){
 				res.val = (num1 + num2 + 1)%10;
-				if((num1 + num2 + 1) > 9){
-					overflow = true;
-				}else{
-					overflow = false;
-				}
+				overflow = (num1 + num2 + 1) > 9;
 				
 			}else{
 				res.val = (num1 + num2)%10;
-				if((num1 + num2) > 9){
-					overflow = true;
-				}else{
-					overflow = false;
-				}
+				overflow = (num1 + num2) > 9;
 				
 			}
 
