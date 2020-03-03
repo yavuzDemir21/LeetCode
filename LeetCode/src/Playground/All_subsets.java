@@ -6,7 +6,7 @@ import java.util.List;
 
 public class All_subsets {
     public static void main(String[] args) {
-        int[] arr = {1,2,2,3,4};
+        int[] arr = {1,1,2,2,3,4};
 
         List<List<Integer>> list = allSubsets(arr);
         list.forEach(x -> System.out.println(Arrays.toString(x.toArray())));
@@ -32,13 +32,14 @@ public class All_subsets {
 
     }
 
-    private static void backtrack_noDuplicates(int[] arr, ArrayList list, List<List<Integer>> res, int start){
+    private static void backtrack_noDuplicates(int[] arr, ArrayList<Integer> list, List<List<Integer>> res, int start){
         res.add(new ArrayList<>(list));
+        int removed = arr[0]-1;
         for(int i=start; i<arr.length; i++){
-            if(i !=0 && arr[i] == arr[i-1]) continue;
+            if(i !=0 && arr[i] == removed) continue;
             list.add(arr[i]);
-            backtrack(arr, list, res, i+1);
-            list.remove(list.size()-1);
+            backtrack_noDuplicates(arr, list, res, i+1);
+            removed = list.remove(list.size()-1);
         }
 
     }

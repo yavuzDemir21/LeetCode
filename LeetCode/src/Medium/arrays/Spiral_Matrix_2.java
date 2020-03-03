@@ -1,4 +1,4 @@
-package Medium;
+package Medium.arrays;
 
 public class Spiral_Matrix_2 {
     public static void main(String[] args) {

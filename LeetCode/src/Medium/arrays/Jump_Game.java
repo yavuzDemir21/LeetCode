@@ -1,4 +1,4 @@
-package Medium;
+package Medium.arrays;
 
 public class Jump_Game {
     public static void main(String[] args) {

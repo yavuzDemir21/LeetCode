@@ -1,4 +1,4 @@
-package Medium;
+package Medium.arrays;
 
 public class Container_With_Most_Water {
 
