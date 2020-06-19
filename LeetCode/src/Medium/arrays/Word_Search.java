@@ -14,7 +14,7 @@ public class Word_Search {
 
     }
 
-    private static boolean exist(char[][] board, String word) {
+    public static boolean exist(char[][] board, String word) {
 
         char[] arr = word.toCharArray();
         for (int i = 0; i < board.length; i++) {
@@ -29,7 +29,7 @@ public class Word_Search {
     }
 
 
-    private static boolean search2(char[][] board, int row, int col, char[] arr, int index){
+    public static boolean search2(char[][] board, int row, int col, char[] arr, int index){
 
         if(arr.length==index) return true;
 
@@ -48,7 +48,7 @@ public class Word_Search {
         return res;
     }
 
-    private static boolean search(char[][] board, int row, int col, char[] arr, int index) {
+    public static boolean search(char[][] board, int row, int col, char[] arr, int index) {
         if (arr.length == index) return true;
 
         boolean up = false, down = false, left = false, right = false;
