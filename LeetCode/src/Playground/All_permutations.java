@@ -7,7 +7,7 @@ import java.util.List;
 
 public class All_permutations {
     public static void main(String[] args) {
-        int[] arr = {1,2,2,3,4};
+        int[] arr = {1,2,3,4};
 
         List<List<Integer>> list = permutations(arr);
         list.forEach(x -> System.out.println(Arrays.toString(x.toArray())));
@@ -17,12 +17,12 @@ public class All_permutations {
         List<List<Integer>> result = new ArrayList<>();
 
         //no dups
-        //backtrack(arr, new ArrayList(), result, hashSet);
+        backtrack(arr, new ArrayList(), result);
         //no dups
 
         //With dups
-        HashSet<Integer> hashSet = new HashSet<>();
-        backtrack_withDup(arr, new ArrayList(), result, hashSet);
+        //HashSet<Integer> hashSet = new HashSet<>();
+        //backtrack_withDup(arr, new ArrayList(), result, hashSet);
         //with dups
 
         return result;
